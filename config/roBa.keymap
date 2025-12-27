@@ -64,19 +64,19 @@
 
         NUM {
             bindings = <
-&kp KP_NUMLOCK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp UNDERSCORE                &kp SEMICOLON     &kp LBKT  &kp  &kp  &kp BACKSPACE
-&kp DOUBLE_QUOTES  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON       &kp      &kp  &kp APOS          &kp       &kp  &kp  &kp LA(TILDE)
-&kp FSLH           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS       &kp      &kp  &kp LC(NUMBER_1)  &kp       &kp  &kp  &kp
-&kp LEFT_CONTROL   &kp KP_NUMBER_0  &kp PERIOD       &kp              &kp             &kp      &kp  &kp                                   &kp RIGHT_SHIFT
+&kp KP_NUMLOCK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp UNDERSCORE                    &kp SEMICOLON     &kp LBKT  &none  &none  &kp BACKSPACE
+&kp DOUBLE_QUOTES  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON       &none      &none  &kp APOS          &none     &none  &none  &kp LA(TILDE)
+&kp FSLH           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS       &none      &none  &kp LC(NUMBER_1)  &none     &none  &none  &none
+&kp LEFT_CONTROL   &kp KP_NUMBER_0  &kp PERIOD       &none            &none           &none      &none  &none                                     &kp RIGHT_SHIFT
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)          &kp LS(NUMBER_4)                                         &kp PAGE_UP    &kp       &kp             &kp        &kp DEL
-&kp TAB           &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)                &kp LS(N8)        &kp LC(LA(KP_NUMBER_0))      &kp HOME  &kp PAGE_DOWN  &kp       &kp UP_ARROW    &kp        &kp LANGUAGE_2
-&kp LEFT_SHIFT    &kp LS(N9)        &kp LS(N0)        &kp LS(NON_US_BACKSLASH)  &kp PLUS          &kp UNDERSCORE               &kp END   &kp SEMICOLON  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp
-&kp LEFT_CONTROL  &kp               &kp LALT          &kp                       &kp               &kp                          &kp       &kp                                                 &kp RSHFT
+&kp ESCAPE        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)          &kp LS(NUMBER_4)                                         &kp PAGE_UP    &none     &none           &none      &kp DEL
+&kp TAB           &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)                &kp LS(N8)        &kp LC(LA(KP_NUMBER_0))      &kp HOME  &kp PAGE_DOWN  &none     &kp UP_ARROW    &none      &kp LANGUAGE_2
+&kp LEFT_SHIFT    &kp LS(N9)        &kp LS(N0)        &kp LS(NON_US_BACKSLASH)  &kp PLUS          &kp UNDERSCORE               &kp END   &kp SEMICOLON  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none
+&kp LEFT_CONTROL  &none             &kp LALT          &none                     &none             &none                        &none     &none                                               &kp RSHFT
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
@@ -84,10 +84,10 @@
 
         MOUSE {
             bindings = <
-&kp ESCAPE        &kp LC(LS(TAB))         &kp PRINTSCREEN  &kp LC(TAB)              &kp                    &kp  &kp       &mkp MB4  &kp       &kp BACKSPACE
-&kp TAB           &kp LEFT_ARROW          &kp              &kp RIGHT_ARROW          &kp END  &kp      &kp  &kp  &mkp MB1  &none     &mkp MB2  &kp GRAVE
-&kp LEFT_SHIFT    &kp LG(LS(LEFT_ARROW))  &kp              &kp LG(LS(RIGHT_ARROW))  &kp      &kp      &kp  &kp  &kp       &mkp MB5  &kp       &kp FSLH
-&kp LEFT_CONTROL  &kp                     &kp LEFT_ALT     &kp                      &kp      &kp      &kp  &kp                                &kp RSHIFT
+&kp ESCAPE        &kp LC(LS(TAB))         &kp PRINTSCREEN  &kp LC(TAB)              &none                      &none  &none     &mkp MB4  &none     &kp BACKSPACE
+&kp TAB           &kp LEFT_ARROW          &none            &kp RIGHT_ARROW          &kp END  &none      &none  &none  &mkp MB1  &none     &mkp MB2  &kp GRAVE
+&kp LEFT_SHIFT    &kp LG(LS(LEFT_ARROW))  &none            &kp LG(LS(RIGHT_ARROW))  &none    &none      &none  &none  &none     &mkp MB5  &none     &kp FSLH
+&kp LEFT_CONTROL  &none                   &kp LEFT_ALT     &none                    &none    &none      &none  &none                                &kp RSHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -95,10 +95,10 @@
 
         FUNCTION {
             bindings = <
-&kp               &kp  &kp       &kp  &kp                &kp  &kp       &kp       &kp       &kp
-&kp               &kp  &kp       &kp  &kp  &kp      &kp  &kp  &mkp MB1  &mkp MB3  &mkp MB2  &kp
-&kp               &kp  &kp       &kp  &kp  &kp      &kp  &kp  &kp       &kp       &kp       &kp
-&kp LEFT_CONTROL  &kp  &kp LALT  &kp  &kp  &kp      &kp  &kp                                &kp
+&none             &none  &none     &none  &none                    &none  &none     &none     &none     &none
+&none             &none  &none     &none  &none  &none      &none  &none  &mkp MB1  &mkp MB3  &mkp MB2  &none
+&none             &none  &none     &none  &none  &none      &none  &none  &none     &none     &none     &none
+&kp LEFT_CONTROL  &none  &kp LALT  &none  &none  &none      &none  &none                                &none
             >;
 
             sensor-bindings =
@@ -108,10 +108,10 @@
 
         SCROLL {
             bindings = <
-&kp F1     &kp F2   &kp F3    &kp F4   &kp                        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH
-&kp F5     &kp F6   &kp F7    &kp F8   &kp  &kp      &bootloader  &kp SEMI   &kp APOS   &kp ENTER  &kp COMMA  &kp DOT
-&sk F9     &kp F10  &kp F11   &kp F12  &kp  &kp      &kp          &kp FSLH   &kp GRAVE  &kp        &kp        &kp
-&kp LCTRL  &kp      &kp LALT  &kp      &kp  &kp      &kp          &kp                                         &kp
+&kp F1     &kp F2   &kp F3    &kp F4   &none                          &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH
+&kp F5     &kp F6   &kp F7    &kp F8   &none  &none      &bootloader  &kp SEMI   &kp APOS   &kp ENTER  &kp COMMA  &kp DOT
+&sk F9     &kp F10  &kp F11   &kp F12  &none  &none      &none        &kp FSLH   &kp GRAVE  &none      &none      &none
+&kp LCTRL  &none    &kp LALT  &none    &none  &none      &none        &none                                       &none
             >;
 
             sensor-bindings =
